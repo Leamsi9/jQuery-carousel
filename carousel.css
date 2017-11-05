@@ -1,0 +1,133 @@
+body {
+    background: #ffffff;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.container h1 {
+    margin: 1%;
+    text-align: center;
+}
+
+/*visible slider*/
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    height: 450px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/*overflow image holder*/
+.carousel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    width: 400%;
+    height: 100%;
+    top: 0;
+}
+
+.carousel li {
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border: none;
+}
+
+.carousel li img {
+    border: none;
+    width: 100%;
+}
+
+.carousel button {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+}
+
+.carousel button.prev {
+    left: 0;
+}
+
+.carousel button.next {
+    right: 0;
+}
+
+.carousel button:hover, .carousel button:active {
+    opacity: 1.0;
+}
+
+.carousel .content {
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3em;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #ffffff;
+    line-height: 3em;
+    padding: 0 2em;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 900px) {
+    .prev i, .next i {
+        background-color: #000;
+        color: #fff;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .carousel {
+        width: 100%;
+        padding: 0;
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .carousel {
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .carousel .image {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .carousel .content {
+        float: none;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
